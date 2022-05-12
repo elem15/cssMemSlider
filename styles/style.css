@@ -8,25 +8,39 @@ body {
     justify-content: center;
     padding: 3vh 0 7vh;
 }
+
 .container {
-    background-color: aquamarine;
+    background-color: rgb(42, 210, 154);
     width: 80vw;
     height: 90vh;
-	overflow: hidden;	
+    overflow: hidden;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 5vh 0;
+    border-radius: 2vh;
+    white-space: nowrap;
+}
+
+@media (max-width: 420px) {
+    body {
+        padding: 0;
+    }
+    .container {
+        flex-direction: row;
+        width: 82vw;
+        height: 95vh;
+    }
 }
 
 .images-slider {
     width: 75vw;
-    height: 75vh;
+    height: 70vh;
     background-color: antiquewhite;
     overflow: hidden;
     position: relative;
     order: 0;
-    margin-bottom: 3vh;
+    margin-bottom: 5vh;
 }
 
 .images-wrapper {
@@ -41,26 +55,40 @@ body {
     width: 75vw;
     height: 75vh;
 }
+
 .red {
     background-color: red;
 }
+
 .green {
     background-color: green;
 }
+
 .yellow {
     background-color: yellow;
 }
+
 .blue {
     background-color: blue;
 }
 
 .text-slider {
-    width: 7em;
+    width: 20vw;
     height: 5vh;
-    background-color: aquamarine;
+    background-color: rgb(42, 210, 154);
     overflow: hidden;
     order: 1;
     margin-right: 30vw;
+}
+
+@media (max-width: 420px) {
+    .text-slider {
+        order: 7;
+        width: 50vw;
+        margin-top: 2vh;
+        margin-left: 3vw;
+
+    }
 }
 
 .text-wrapper {
@@ -74,66 +102,91 @@ body {
 
 .text {
     white-space: nowrap;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1em;
+}
+
+@media (max-width: 420px) {
+    .text {
+        font-size: 1.5em;
+    }
 }
 
 .view-control {
     display: none;
-    cursor: pointer;
-    border-color: white;
-    background-color: white;
-    color: white;
 }
 
-.view-control + label {
-    background: #999;
-    border: solid 10px aquamarine;
+.view-control+label {
+    background: rgb(242, 243, 243);
+    border: solid 10px rgb(42, 210, 154);
     border-radius: 50%;
     height: 25px;
     width: 25px;
-    display:inline-block;
-    padding: 0 0 0 0px;
+    display: inline;
+    padding: 0;
     cursor: pointer;
     padding: 5px;
+    transition: all .2s ease-in-out;
 }
-.view-control:checked + label {
-    background: #0080FF;
+
+.view-control:hover+label {
+    background: #2d96ff;
+    border: solid 10px rgb(168, 231, 210);
+}
+
+.view-control:checked:hover+label {
+    background: #2d96ff;
+    border: solid 10px rgb(42, 210, 154);
+}
+
+.view-control:checked+label {
+    background: blue;
     height: 16px;
     width: 16px;
-    display:inline-block;
+    display: inline-block;
     padding: 5px;
 }
 
-.view-control-1 + label{
+.view-control-1+label {
     order: 2;
 }
-.view-control-2 + label{
+
+.view-control-2+label {
     order: 3;
 }
-.view-control-3 + label{
+
+.view-control-3+label {
     order: 4;
 }
-.view-control-4 + label{
+
+.view-control-4+label {
     order: 5;
 }
 
-.view-control-2:checked ~.images-slider  .images-wrapper {
+.view-control-2:checked~.images-slider .images-wrapper {
     margin-left: -80vw;
 }
-.view-control-3:checked ~.images-slider  .images-wrapper {
+
+.view-control-3:checked~.images-slider .images-wrapper {
     margin-left: -160vw;
 }
-.view-control-4:checked ~.images-slider  .images-wrapper {
+
+.view-control-4:checked~.images-slider .images-wrapper {
     margin-left: -240vw;
 }
-.view-control-2:checked ~.text-slider  .text-wrapper {
+
+.view-control-2:checked~.text-slider .text-wrapper {
     margin-left: -8em;
 }
-.view-control-3:checked ~.text-slider  .text-wrapper {
+
+.view-control-3:checked~.text-slider .text-wrapper {
     margin-left: -15em;
 }
-.view-control-4:checked ~.text-slider  .text-wrapper {
+
+.view-control-4:checked~.text-slider .text-wrapper {
     margin-left: -23em;
 }
+
 .radio-test {
     width: 10px;
     height: 10px;
