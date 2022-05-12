@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    padding: 10vh 0;
+}
+.container {
+    background-color: aquamarine;
+    width: 80vw;
+    height: 70vh;
+	overflow: hidden;	
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 5vh 0;
+}
+
+.images-slider {
+    width: 75vw;
+    height: 50vh;
+    background-color: antiquewhite;
+    overflow: hidden;
+    position: relative;
+    order: 0;
+}
+
+.images-wrapper {
+    display: flex;
+    min-width: 320vw;
+    column-gap: 5vw;
+    margin-left: 0;
+    transition: all .5s;
+}
+
+.image {
+    width: 75vw;
+    height: 50vh;
+}
+.red {
+    background-color: red;
+}
+.green {
+    background-color: green;
+}
+.yellow {
+    background-color: yellow;
+}
+.blue {
+    background-color: blue;
+}
+
+.text-slider {
+    width: 7em;
+    height: 5vh;
+    background-color: aliceblue;
+    overflow: hidden;
+    order: 1;
+    margin-right: 30vw;
+}
+
+.text-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    width: 30em;
+    column-gap: 3vw;
+    margin-left: 0;
+    transition: all .5s;
+}
+
+.view-control-1 {
+    order: 2;
+}
+.view-control-2 {
+    order: 3;
+}
+.view-control-3 {
+    order: 4;
+}
+.view-control-4 {
+    order: 5;
+}
+
+.view-control-2:checked ~.images-slider  .images-wrapper {
+    margin-left: -80vw;
+}
+.view-control-3:checked ~.images-slider  .images-wrapper {
+    margin-left: -160vw;
+}
+.view-control-4:checked ~.images-slider  .images-wrapper {
+    margin-left: -240vw;
+}
+.view-control-2:checked ~.text-slider  .text-wrapper {
+    margin-left: -8em;
+}
+.view-control-3:checked ~.text-slider  .text-wrapper {
+    margin-left: -15em;
+}
+.view-control-4:checked ~.text-slider  .text-wrapper {
+    margin-left: -23em;
+}
+.radio-test {
+    width: 10px;
+    height: 10px;
+    background-color: red;
+}
