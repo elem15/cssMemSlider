@@ -25,6 +25,7 @@ body {
     body {
         padding: 0;
     }
+
     .container {
         flex-direction: row;
         width: 82vw;
@@ -53,6 +54,7 @@ body {
     width: 75vw;
     height: 75vh;
 }
+
 @media (max-width: 430px) {
     .images-slider {
         height: 50vh;
@@ -93,13 +95,14 @@ body {
     margin-left: 10em;
     transition: all .5s;
 }
+
 @media (max-width: 430px) {
     .text-wrapper {
         margin-left: 10em;
         column-gap: 3em;
     }
 }
- 
+
 .text {
     white-space: normal;
     font-family: Arial, Helvetica, sans-serif;
@@ -165,16 +168,13 @@ body {
 .view-control-4+label {
     order: 5;
 }
-/* @media (min-width: 1200px) {
-    .view-control-1+label {
-        margin-left: 100vw;
-    }
-} */
+
 @media (min-width: 1024px) {
     .view-control-1+label {
         margin-left: 37vw;
     }
 }
+
 @media (min-width: 680px) {
     .view-control-1+label {
         margin-left: 27vw;
@@ -185,6 +185,7 @@ body {
     .view-control-1+label {
         margin-left: 20vw;
     }
+
     .view-control-4+label {
         margin-right: 20vw;
     }
