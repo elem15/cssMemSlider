@@ -59,17 +59,17 @@ body {
 
 @media (min-width: 50rem) {   
     .container {
-        width: 700px;
+        width: 44rem;
     }
     .images-slider {
-        width: 650px;
+        width: 40.5rem;
     }
     .images-wrapper {
-        min-width: 2600px;
+        min-width: 162.5rem;
         column-gap: 0;
     }
     .image {
-        width: 650px;
+        width: 40.5rem;
     }
 }
 
@@ -152,30 +152,30 @@ body {
 
 .view-control+label {
     background: rgb(242, 243, 243);
-    border: solid 10px rgb(42, 210, 154);
+    border: solid 0.6rem rgb(42, 210, 154);
     border-radius: 50%;
-    height: 25px;
-    width: 25px;
+    height: 1.6rem;
+    width: 1.6rem;
     display: inline;
     padding: 0;
     cursor: pointer;
-    padding: 5px;
+    padding: 0.3rem;
     transition: all .2s ease-in-out;
 }
 
 .view-control:hover+label {
     background: #9345be;
-    border: solid 10px rgb(168, 231, 210);
+    border: solid 0.6rem rgb(168, 231, 210);
 }
 
 .view-control:checked:active+label {
     background: #ab2dff;
-    border: solid 10px rgba(136, 201, 25);
+    border: solid 0.6rem rgba(136, 201, 25);
 }
 
 .view-control:checked:hover+label {
     background: #2d96ff;
-    border: solid 10px rgb(42, 210, 154);
+    border: solid 0.6rem rgb(42, 210, 154);
 }
 
 .view-control:checked+label {
@@ -183,7 +183,7 @@ body {
     height: 1rem;
     width: 1rem;
     display: inline-block;
-    padding: 5px;
+    padding: 0.3rem;
 }
 
 .view-control-1+label {
@@ -210,7 +210,7 @@ body {
 }
 @media (min-width: 50rem) {
     .view-control-1+label {
-        margin-left: 200px;
+        margin-left: 12.5rem;
     }
 }
 
@@ -246,15 +246,15 @@ body {
 
 @media (min-width: 50rem) {
     .view-control-2:checked~.images-slider .images-wrapper {
-        margin-left: -650px;
+        margin-left: -40.5rem;
     }
     
     .view-control-3:checked~.images-slider .images-wrapper {
-        margin-left: -1300px;
+        margin-left: -81rem;
     }
     
     .view-control-4:checked~.images-slider .images-wrapper {
-        margin-left: -1950px;
+        margin-left: -122rem;
     }
 }
 @media (max-width: 27rem) {
