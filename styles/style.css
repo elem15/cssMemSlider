@@ -37,7 +37,7 @@ body {
 .images-slider {
     width: 75vw;
     height: 67vh;
-    background-color: antiquewhite;
+    background-color: rgb(42, 210, 154);
     overflow: hidden;
     order: 0;
     margin-bottom: 5vh;
@@ -54,22 +54,41 @@ body {
 
 .image {
     width: 75vw;
-    height: 67vh;
+    height: 85vw;
 }
 
 @media (min-width: 50rem) {   
     .container {
-        width: 44rem;
+        width: 40rem;
     }
     .images-slider {
-        width: 40.5rem;
+        width: 30rem;
     }
     .images-wrapper {
-        min-width: 162.5rem;
+        min-width: 120rem;
         column-gap: 0;
     }
     .image {
-        width: 40.5rem;
+        width: 30rem;
+        height: 35rem;
+    }
+}
+
+@media (max-height: 40rem) {
+    .container {
+        padding: 5vh 18vw;
+    }
+    .images-slider {
+        width: 30vh;
+        margin: auto 10vh;
+    }
+    .images-wrapper {
+        min-width: 120vh;
+        column-gap: 0;
+    }
+    .image {
+        width: 30vh;
+        height: 35vh;
     }
 }
 
@@ -127,7 +146,7 @@ body {
 @media (max-width: 27rem) {
     .text-wrapper {
         margin-left: 10em;
-        column-gap: 3em;
+        column-gap: 3.1em;
     }
 }
 
@@ -210,7 +229,17 @@ body {
 }
 @media (min-width: 50rem) {
     .view-control-1+label {
-        margin-left: 12.5rem;
+        margin-left: 8rem;
+    }
+}
+@media (max-height: 40rem) {
+    .text-slider {
+        width: 9em;
+        margin-left: 0.7em;
+        margin-right: 0;
+    }
+    .view-control-1+label {
+        margin-left: 0;
     }
 }
 
@@ -246,15 +275,28 @@ body {
 
 @media (min-width: 50rem) {
     .view-control-2:checked~.images-slider .images-wrapper {
-        margin-left: -40.5rem;
+        margin-left: -30rem;
     }
     
     .view-control-3:checked~.images-slider .images-wrapper {
-        margin-left: -81rem;
+        margin-left: -60rem;
     }
     
     .view-control-4:checked~.images-slider .images-wrapper {
-        margin-left: -121rem;
+        margin-left: -90rem;
+    }
+}
+@media (max-height: 40rem) {
+    .view-control-2:checked~.images-slider .images-wrapper {
+        margin-left: -30vh;
+    }
+    
+    .view-control-3:checked~.images-slider .images-wrapper {
+        margin-left: -60vh;
+    }
+    
+    .view-control-4:checked~.images-slider .images-wrapper {
+        margin-left: -90vh;
     }
 }
 @media (max-width: 27rem) {
