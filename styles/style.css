@@ -168,9 +168,9 @@ body {
     border: solid 0.6rem rgb(168, 231, 210);
 }
 
-.view-control:checked:active+label {
-    background: #ab2dff;
-    border: solid 0.6rem rgba(136, 201, 25);
+.view-control:active+label {
+    background: #be4559;
+    border: solid 0.6rem rgb(240, 228, 4);
 }
 
 .view-control:checked:hover+label {
@@ -254,7 +254,7 @@ body {
     }
     
     .view-control-4:checked~.images-slider .images-wrapper {
-        margin-left: -122rem;
+        margin-left: -121rem;
     }
 }
 @media (max-width: 27rem) {
