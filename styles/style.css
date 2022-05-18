@@ -1,0 +1,326 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    padding: 2vh 0 3vh;
+}
+
+.container {
+    background-color: rgb(42, 210, 154);
+    width: 80vw;
+    height: 95vh;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 5vh 0;
+    border-radius: 2vh;
+}
+
+@media (max-width: 27rem) {
+    body {
+        padding: 0;
+    }
+
+    .container {
+        flex-direction: row;
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+    }
+}
+
+.images-slider {
+    width: 75vw;
+    height: 67vh;
+    background-color: rgb(42, 210, 154);
+    overflow: hidden;
+    order: 0;
+    margin-bottom: 5vh;
+}
+
+.images-wrapper {
+    display: flex;
+    min-width: 320vw;
+    column-gap: 5vw;
+    margin-left: 0;
+    transition: all .5s;
+    height: 75vh;
+}
+
+.image {
+    width: 75vw;
+    height: 67vh;
+}
+
+@media (min-width: 50rem) {   
+    .container {
+        width: 40rem;
+    }
+    .images-slider {
+        width: 30rem;
+    }
+    .images-wrapper {
+        min-width: 120rem;
+        column-gap: 0;
+    }
+    .image {
+        width: 30rem;
+        height: 35rem;
+    }
+}
+
+/* @media (max-height: 40rem) and (min-width: 27rem) and (max-width: 50rem) {
+    .container {
+        padding: 5vh 18vw;
+    }
+    .images-slider {
+        width: 30vh;
+        margin: auto 10vh;
+    }
+    .images-wrapper {
+        min-width: 120vh;
+        column-gap: 0;
+    }
+    .image {
+        width: 30vh;
+        height: 35vh;
+    }
+} */
+
+@media (max-width: 27rem) {
+    .images-slider {
+        height: 50vh;
+        width: 90vw;
+    }
+    .images-wrapper {        
+        min-width: 400vw;
+        column-gap: 0;
+    }
+    .image {
+        height: 50vh;
+        width: 100vw;
+    }
+}
+
+.slider-image {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(42, 210, 154);
+}
+
+.text-slider {
+    width: 11em;
+    height: 8vh;
+    background-color: rgb(42, 210, 154);
+    overflow: hidden;
+    order: 1;
+    margin-right: 8vw;
+    margin-left: 2vw;
+    height: 18vw;
+}
+
+@media (max-width: 27rem) {
+    .text-slider {
+        order: 7;
+        width: 50vw;
+        margin-top: 2vh;
+        margin-left: 0;
+        height: 20vh;
+    }
+}
+
+.text-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    width: 30em;
+    column-gap: 2em;
+    margin-left: 10em;
+    transition: all .5s;
+}
+
+@media (max-width: 27rem) {
+    .text-wrapper {
+        margin-left: 10em;
+        column-gap: 3.1em;
+    }
+}
+
+.text {
+    white-space: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1em;
+    min-width: 10em;
+    height: 4em;
+}
+
+@media (max-width: 27rem) {
+    .text {
+        font-size: 1.4rem;
+        min-width: 7em;
+    }
+}
+
+.view-control {
+    display: none;
+}
+
+.view-control+label {
+    background: rgb(242, 243, 243);
+    border: solid 0.6rem rgb(42, 210, 154);
+    border-radius: 50%;
+    height: 1.6rem;
+    width: 1.6rem;
+    display: inline;
+    padding: 0;
+    cursor: pointer;
+    padding: 0.3rem;
+    transition: all .2s ease-in-out;
+}
+
+.view-control:hover+label {
+    background: #9345be;
+    border: solid 0.6rem rgb(168, 231, 210);
+}
+
+.view-control:active+label {
+    background: #be4559;
+    border: solid 0.6rem rgb(240, 228, 4);
+}
+
+.view-control:checked:hover+label {
+    background: #2d96ff;
+    border: solid 0.6rem rgb(42, 210, 154);
+}
+
+.view-control:checked+label {
+    background: blue;
+    height: 1rem;
+    width: 1rem;
+    display: inline-block;
+    padding: 0.3rem;
+}
+
+.view-control-1+label {
+    order: 2;
+}
+
+.view-control-2+label {
+    order: 3;
+}
+
+.view-control-3+label {
+    order: 4;
+}
+
+.view-control-4+label {
+    order: 5;
+}
+
+
+@media (min-width: 42.5rem) {
+    .view-control-1+label {
+        margin-left: 27vw;
+    }
+}
+@media (min-width: 50rem) {
+    .view-control-1+label {
+        margin-left: 8rem;
+    }
+}
+/* @media (max-height: 40rem) and (min-width: 27rem) and (max-width: 50rem) {
+    .text-slider {
+        width: 9em;
+        margin-left: 0.7em;
+        margin-right: 0;
+    }
+    .view-control-1+label {
+        margin-left: 0;
+    }
+} */
+
+@media (max-width: 27rem) {
+    .view-control+label {
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+    .view-control:checked+label {
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+    .view-control-1+label {
+        margin-left: 20vw;
+    }
+
+    .view-control-4+label {
+        margin-right: 20vw;
+    }
+}
+
+.view-control-2:checked~.images-slider .images-wrapper {
+    margin-left: -80vw;
+}
+
+.view-control-3:checked~.images-slider .images-wrapper {
+    margin-left: -160vw;
+}
+
+.view-control-4:checked~.images-slider .images-wrapper {
+    margin-left: -240vw;
+}
+
+@media (min-width: 50rem) {
+    .view-control-2:checked~.images-slider .images-wrapper {
+        margin-left: -30rem;
+    }
+    
+    .view-control-3:checked~.images-slider .images-wrapper {
+        margin-left: -60rem;
+    }
+    
+    .view-control-4:checked~.images-slider .images-wrapper {
+        margin-left: -90rem;
+    }
+}
+/* @media (max-height: 40rem) and (min-width: 27rem) and (max-width: 50rem) {
+    .view-control-2:checked~.images-slider .images-wrapper {
+        margin-left: -30vh;
+    }
+    
+    .view-control-3:checked~.images-slider .images-wrapper {
+        margin-left: -60vh;
+    }
+    
+    .view-control-4:checked~.images-slider .images-wrapper {
+        margin-left: -90vh;
+    }
+} */
+@media (max-width: 27rem) {
+    .view-control-2:checked~.images-slider .images-wrapper {
+        margin-left: -100vw;
+    }
+    
+    .view-control-3:checked~.images-slider .images-wrapper {
+        margin-left: -200vw;
+    }
+    
+    .view-control-4:checked~.images-slider .images-wrapper {
+        margin-left: -300vw;
+    }
+}
+
+.view-control-2:checked~.text-slider .text-wrapper {
+    margin-left: -3em;
+}
+
+.view-control-3:checked~.text-slider .text-wrapper {
+    margin-left: -16em;
+}
+
+.view-control-4:checked~.text-slider .text-wrapper {
+    margin-left: -29em;
+}
