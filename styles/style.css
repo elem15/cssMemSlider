@@ -54,7 +54,7 @@ body {
 
 .image {
     width: 75vw;
-    height: 85vw;
+    height: 67vh;
 }
 
 @media (min-width: 50rem) {   
@@ -74,7 +74,7 @@ body {
     }
 }
 
-@media (max-height: 40rem) {
+/* @media (max-height: 40rem) and (min-width: 27rem) and (max-width: 50rem) {
     .container {
         padding: 5vh 18vw;
     }
@@ -90,7 +90,7 @@ body {
         width: 30vh;
         height: 35vh;
     }
-}
+} */
 
 @media (max-width: 27rem) {
     .images-slider {
@@ -232,7 +232,7 @@ body {
         margin-left: 8rem;
     }
 }
-@media (max-height: 40rem) {
+/* @media (max-height: 40rem) and (min-width: 27rem) and (max-width: 50rem) {
     .text-slider {
         width: 9em;
         margin-left: 0.7em;
@@ -241,7 +241,7 @@ body {
     .view-control-1+label {
         margin-left: 0;
     }
-}
+} */
 
 @media (max-width: 27rem) {
     .view-control+label {
@@ -286,7 +286,7 @@ body {
         margin-left: -90rem;
     }
 }
-@media (max-height: 40rem) {
+/* @media (max-height: 40rem) and (min-width: 27rem) and (max-width: 50rem) {
     .view-control-2:checked~.images-slider .images-wrapper {
         margin-left: -30vh;
     }
@@ -298,7 +298,7 @@ body {
     .view-control-4:checked~.images-slider .images-wrapper {
         margin-left: -90vh;
     }
-}
+} */
 @media (max-width: 27rem) {
     .view-control-2:checked~.images-slider .images-wrapper {
         margin-left: -100vw;
